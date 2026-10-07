@@ -4,6 +4,7 @@
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
+      "launchUrl": "HTML/HtmlTables.html",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5073",
       "environmentVariables": {
@@ -13,6 +14,7 @@
     "https": {
       "commandName": "Project",
       "dotnetRunMessages": true,
+      "launchUrl": "HTML/HtmlTables.html",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7002;http://localhost:5073",
       "environmentVariables": {
