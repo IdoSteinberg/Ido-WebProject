@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SignUpPage</title>
+</head>
+<body>
+    <table border="1" style="width:100%" cellpadding="15">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="width:20%"></td>
+            <td align="center" colspan="4">
+                <h1>HTML Signup Form</h1>
+            </td>
+            <td style="width:20%"></td>
+        </tr>
+    </table>
+    <br />
+    <table border="1" cellpadding="5" style="width:100%">
+        <tr>
+            <td style="width:20%"></td>
+            <td>
+                <form action="https://handasaim.co.il">
+                    <table align="center" border="1" dir="rtl">
+                        <tr>
+                            <td>:שם פרטי</td>
+                            <td>
+                                <input type="text"
+                                       id="firstName"
+                                       name="firstName" maxlength="50"
+                                       placeholder="שם פרטי" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>:שם משפחה</td>
+                            <td>
+                                <input type="text"
+                                       id="lastName"
+                                       name="lastName" maxlength="50"
+                                       placeholder="שם משפחה" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>:אימייל</td>
+                            <td>
+                                <input type="email"
+                                       id="uEmail"
+                                       name="uEmail" maxlength="50"
+                                       placeholder="email" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>:סיסמה</td>
+                            <td>
+                                <input type="password"
+                                       id="uPass"
+                                       name="uPass" maxlength="50"
+                                       placeholder="סיסמה" />
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>טלפון נייד</td>
+                            <td>
+                                <input type="text"
+                                       id="uMobile"
+                                       name="uMobile" maxlength="7"
+                                       placeholder="מספר טלפון" />
+                                <select id="pref" name="pref">
+                                    <option value="050">050</option>
+                                    <option value="051">051</option>
+                                    <option value="052" selected>052</option>
+                                    <option value="053">053</option>
+                                    <option value="054">054</option>
+                                    <option value="055">055</option>
+                                    <option value="056">056</option>
+                                    <option value="057">057</option>
+                                    <option value="058">058</option>
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>תאריך לידה:</td>
+                            <td>
+                                <select name="year" id="year">
+                                    <option value="" selected>Year</option>
+                                    <!-- Options for years 1900-2024 -->
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <!-- Add more years as needed -->
+                                </select>
+                                <select name="month" id="month">
+                                    <option value="" selected>Month</option>
+                                    <option value="M1">January</option>
+                                    <option value="M2">February</option>
+                                    <option value="M3">March</option>
+                                    <!-- Add more months as needed -->
+                                </select>
+                                <select name="day" id="day">
+                                    <option value="" selected>Day</option>
+                                    <!-- Options for days 1-31 -->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <!-- Add more days as needed -->
+                                </select>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>מגדר:</td>
+                            <td>
+                                <input type="radio" id="male" name="gender" value="male" />
+                                <label for="male">זכר</label>
+                                <input type="radio" id="female" name="gender" value="female" />
+                                <label for="female">נקבה</label>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>תחומי עניין:</td>
+                            <td>
+                                <input type="checkbox" id="interest1" name="interests" value="sports" />
+                                <label for="interest1">ספורט</label>
+                                <input type="checkbox" id="interest2" name="interests" value="music" />
+                                <label for="interest2">מוזיקה</label>
+                                <input type="checkbox" id="interest3" name="interests" value="settlements" />
+                                <label for="interest3">התנחלות</label>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <input type="submit" value="שלח" />
+                                <input type="reset" value="נקה" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            <td style="width:20%"></td>
+        </tr>
+    </table>
+</body>
+</html>
