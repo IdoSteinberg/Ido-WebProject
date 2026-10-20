@@ -1,82 +1,70 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html dir="rtl">
 <head>
     <meta charset="utf-8" />
     <title>SignUpPage</title>
 </head>
 <body>
-    <table border="1" style="width:100%" cellpadding="15">
+    <table border="1" cellpadding="15" cellspacing="10" align="center" style="width:80%; text-align:center;" dir="ltr">
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="7" style="height:20px;"></td>
         </tr>
         <tr>
-            <td style="width:20%"></td>
-            <td align="center" colspan="4">
-                <h1>HTML Signup Form</h1>
-            </td>
-            <td style="width:20%"></td>
+            <td style="width:23%;"></td>
+            <td style="width:25%; text-align:left; direction:ltr;"><a href="https://handasaim.co.il/images/logo-circle.png" target="_blank">LOGO</a></td>
+            <td style="width:10%;">צור<br />קשר</td>
+            <td style="width:10%;">תקנון</td>
+            <td style="width:10%;">אודות</td>
+            <td style="width:10%;">על<br />הפרויקט</td>
+            <td style="width:17%;"></td>
+        </tr>
+        <tr>
+            <td colspan="7" style="height:80px; background-color:#f1f7ff; color:#5caf4b; font-weight:bold; font-size:18px;">דף הרשמה</td>
         </tr>
     </table>
+
     <br />
-    <table border="1" cellpadding="5" style="width:100%">
-        <tr>
-            <td style="width:20%"></td>
-            <td>
-                <form action="https://handasaim.co.il">
-                    <table align="center" border="1" dir="rtl">
+
+    <form action="https://handasaim.co.il">
+        <table border="1" cellpadding="15" cellspacing="10" align="center" style="width:80%;">
+            <tr>
+                <td style="width:50%; vertical-align:top;">
+                    <table border="1" cellpadding="15" cellspacing="10" style="width:100%;" dir="rtl">
                         <tr>
-                            <td>:שם פרטי</td>
-                            <td>
-                                <input type="text"
-                                       id="firstName"
-                                       name="firstName" maxlength="50"
-                                       placeholder="שם פרטי" />
-                            </td>
-                            <td></td>
+                            <td style="width:20%; font-weight:bold;">שם<br />פרטי:</td>
+                            <td><input type="text" id="firstName" name="firstName" maxlength="50" placeholder="שם פרטי" style="width:95%; padding:8px;" /></td>
                         </tr>
                         <tr>
-                            <td>:שם משפחה</td>
-                            <td>
-                                <input type="text"
-                                       id="lastName"
-                                       name="lastName" maxlength="50"
-                                       placeholder="שם משפחה" />
-                            </td>
-                            <td></td>
+                            <td style="font-weight:bold;">שם<br />משפחה:</td>
+                            <td><input type="text" id="lastName" name="lastName" maxlength="50" placeholder="שם משפחה" style="width:95%; padding:8px;" /></td>
                         </tr>
                         <tr>
-                            <td>:אימייל</td>
-                            <td>
-                                <input type="email"
-                                       id="uEmail"
-                                       name="uEmail" maxlength="50"
-                                       placeholder="email" />
-                            </td>
-                            <td></td>
+                            <td style="font-weight:bold;">Email:</td>
+                            <td><input type="email" id="uEmail" name="uEmail" maxlength="50" placeholder="Email" style="width:95%; padding:8px;" /></td>
                         </tr>
                         <tr>
-                            <td>:סיסמה</td>
+                            <td style="font-weight:bold;">סיסמא:</td>
                             <td>
-                                <input type="password"
-                                       id="uPass"
-                                       name="uPass" maxlength="50"
-                                       placeholder="סיסמה" />
+                                <input type="password" id="uPass" name="uPass" maxlength="50" placeholder="סיסמא" style="width:95%; padding:8px;" /><br />
+                                <span dir="ltr" style="display:block; text-align:left;">
+                                    <input type="checkbox" id="showPassword" onchange="togglePasswords()" />
+                                    <label for="showPassword">Show Password</label>
+                                </span>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td>טלפון נייד</td>
+                            <td style="font-weight:bold;">אימות<br />סיסמא:</td>
+                            <td><input type="password" id="confirmPass" name="confirmPass" maxlength="50" placeholder="אימות סיסמא" style="width:95%; padding:8px;" /></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width:50%; vertical-align:top;">
+                    <table border="1" cellpadding="15" cellspacing="10" style="width:100%;" dir="rtl">
+                        <tr>
+                            <td style="width:35%; font-weight:bold;">טלפון:</td>
                             <td>
-                                <input type="text"
-                                       id="uMobile"
-                                       name="uMobile" maxlength="7"
-                                       placeholder="מספר טלפון" />
-                                <select id="pref" name="pref">
+                                <input type="text" id="uMobile" name="uMobile" maxlength="7" placeholder="טלפון נייד" style="width:65%; padding:8px;" />
+                                <select id="pref" name="pref" style="padding:8px;">
                                     <option value="050">050</option>
                                     <option value="051">051</option>
                                     <option value="052" selected>052</option>
@@ -88,70 +76,64 @@
                                     <option value="058">058</option>
                                 </select>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td>תאריך לידה:</td>
+                            <td style="font-weight:bold;">תאריך לידה:</td>
                             <td>
-                                <select name="year" id="year">
-                                    <option value="" selected>Year</option>
-                                    <!-- Options for years 1900-2024 -->
+                                <select name="year" id="year" style="padding:7px;">
+                                    <option value="" selected>2025</option>
                                     <option value="2011">2011</option>
                                     <option value="2012">2012</option>
                                     <option value="2013">2013</option>
-                                    <!-- Add more years as needed -->
                                 </select>
-                                <select name="month" id="month">
-                                    <option value="" selected>Month</option>
-                                    <option value="M1">January</option>
-                                    <option value="M2">February</option>
-                                    <option value="M3">March</option>
-                                    <!-- Add more months as needed -->
+                                <select name="month" id="month" style="padding:7px;">
+                                    <option value="" selected>10</option>
+                                    <option value="M1">01</option>
+                                    <option value="M2">02</option>
+                                    <option value="M3">03</option>
                                 </select>
-                                <select name="day" id="day">
-                                    <option value="" selected>Day</option>
-                                    <!-- Options for days 1-31 -->
+                                <select name="day" id="day" style="padding:7px;">
+                                    <option value="" selected>16</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
-                                    <!-- Add more days as needed -->
                                 </select>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td>מגדר:</td>
+                            <td style="font-weight:bold;">מגדר:</td>
                             <td>
                                 <input type="radio" id="male" name="gender" value="male" />
                                 <label for="male">זכר</label>
                                 <input type="radio" id="female" name="gender" value="female" />
                                 <label for="female">נקבה</label>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td>תחומי עניין:</td>
-                            <td>
-                                <input type="checkbox" id="interest1" name="interests" value="sports" />
-                                <label for="interest1">ספורט</label>
-                                <input type="checkbox" id="interest2" name="interests" value="music" />
-                                <label for="interest2">מוזיקה</label>
-                                <input type="checkbox" id="interest3" name="interests" value="settlements" />
-                                <label for="interest3">התנחלות</label>
+                            <td colspan="2" style="text-align:center;">
+                                <input type="checkbox" id="terms" name="terms" />
+                                <label for="terms">נא לעיין בתקנון ולאשר את  <a href="https://handasaim.co.il" target="_blank">תנאי השימוש</a> באתר </label>
                             </td>
-                            <td></td>
                         </tr>
                         <tr>
-                            <td colspan="2" align="center">
-                                <input type="submit" value="שלח" />
-                                <input type="reset" value="נקה" />
+                            <td colspan="2" style="text-align:center;">
+                                <input type="submit" value="Submit" style="width:95%; padding:10px; background-color:#5caf4b; color:white; border:0;" />
                             </td>
                         </tr>
                     </table>
-                </form>
-            </td>
-            <td style="width:20%"></td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
+<script>
+    function togglePasswords() {
+        const password = document.getElementById("uPass");
+        const confirmation = document.getElementById("confirmPass");
+        const showPassword = password.type === "password";
+
+        password.type = showPassword ? "text" : "password";
+        confirmation.type = showPassword ? "text" : "password";
+    }
+</script>
 </html>
