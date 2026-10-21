@@ -125,15 +125,16 @@
             </tr>
         </table>
     </form>
-</body>
-<script>
-    function togglePasswords() {
-        const password = document.getElementById("uPass");
-        const confirmation = document.getElementById("confirmPass");
-        const showPassword = password.type === "password";
+    <script>
+        function togglePasswords() {
+            const password = document.getElementById("uPass");
+            const confirmation = document.getElementById("confirmPass");
+            const showPassword = password.type === "password";
 
-        password.type = showPassword ? "text" : "password";
-        confirmation.type = showPassword ? "text" : "password";
-    }
-</script>
+            password.type = showPassword ? "text" : "password";
+            confirmation.type = showPassword ? "text" : "password";
+        }
+    </script>
+</body>
+
 </html>
