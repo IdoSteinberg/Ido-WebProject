@@ -15,7 +15,7 @@
             sum += num
             alert("Sum: " + sum)
         }
-        */
+        
         var monthNum = parseInt(prompt("Enter the month number: "));
 
         switch (monthNum) {
@@ -58,10 +58,33 @@
             default:
                 alert("Unknown month number.")
                 break;
+        }*/
+        function myFunc(fName) {
+            alert("myFunc")
+            if (fName == "Kostya") {
+                document.write("<h1>Hello " + fname + "</h1>");
+            }
+            else {
+                document.write("<h1>Hello stranger</h1>");
+            }
         }
+        function bgColorYellow() {
+            document.body.style.backgroundColor = "yellow";
+        }
+        function bgColorWhite() {
+            document.body.style.backgroundColor = "white";
+        }
+        alert("Start of script")
+        name = prompt("Enter your name please:");
+        myFunc(name);
+        alert("End of script")
     </script>
 </head>
 <body>
     <h1>JS workout</h1>
+    <div align="center" dir="rtl">
+        <a href="" onclick="bgColorYellow()">Change Background to Yellow</a>
+        <a href="" onclick="bgColorWhite()">Change Background to White</a>
+    </div>
 </body>
 </html>
