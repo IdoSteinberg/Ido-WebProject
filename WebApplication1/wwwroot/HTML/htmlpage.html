@@ -1,90 +1,48 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <script type="text/javascript">
-
-        //Life Cycle of a web page
-        /*
-        var sum = 3
-        var num = parseInt(prompt("Enter first number:"));
-        if (isNaN(num)) {
-            alert("Invalid input. Please enter a valid number.");
-        } else {
-            sum += num
-            alert("Sum: " + sum)
-        }
-        
-        var monthNum = parseInt(prompt("Enter the month number: "));
-
-        switch (monthNum) {
-            case 1:
-                alert("You entered January.")
-                break;
-            case 2:
-                alert("You entered February.")
-                break;
-            case 3:
-                alert("You entered March.")
-                break;
-            case 4:
-                alert("You entered April.")
-                break;
-            case 5:
-                alert("You entered May.")
-                break;
-            case 6:
-                alert("You entered June.")
-                break;
-            case 7:
-                alert("You entered July.")
-                break;
-            case 8:
-                alert("You entered August.")
-                break;
-            case 9:
-                alert("You entered September.")
-                break;
-            case 10:
-                alert("You entered October.")
-                break;
-            case 11:
-                alert("You entered November.")
-                break;
-            case 12:
-                alert("You entered December.")
-                break;
-            default:
-                alert("Unknown month number.")
-                break;
-        }*/
-        function myFunc(fName) {
-            alert("myFunc")
-            if (fName == "Kostya") {
-                document.write("<h1>Hello " + fname + "</h1>");
-            }
-            else {
-                document.write("<h1>Hello stranger</h1>");
-            }
-        }
-        function bgColorYellow() {
-            document.body.style.backgroundColor = "yellow";
-        }
-        function bgColorWhite() {
-            document.body.style.backgroundColor = "white";
-        }
-        alert("Start of script")
-        name = prompt("Enter your name please:");
-        myFunc(name);
-        alert("End of script")
-    </script>
+    <meta charset="utf-8">
+    <title>Exercise 6</title>
 </head>
-<body>
-    <h1>JS workout</h1>
-    <div align="center" dir="rtl">
-        <a href="" onclick="bgColorYellow()">Change Background to Yellow</a>
-        <a href="" onclick="bgColorWhite()">Change Background to White</a>
-    </div>
+
+<body dir="rtl">
+
+    <script type="text/javascript">
+            var firstName = prompt("הכנס שם פרטי:");
+            var lastName = prompt("הכנס שם משפחה:");
+            var age = prompt("הכנס גיל:");
+            var address = prompt("הכנס כתובת:");
+            if (firstName == null || firstName == " ") {
+                firstName = "לא הוזן שם פרטי";
+            }
+            if (lastName == null || lastName == " ") {
+                lastName = "לא הוזן שם משפחה";
+            }
+            if (isNaN(age) || age == " ") {
+                age = "לא הוזן גיל";
+            }
+            if (address == null || address == "") {
+                address = "לא הוזנה כתובת";
+            }
+            document.write("<table border='1' style='margin:auto; margin-top:150px; border-collapse:collapse; width:740px;'>");
+
+            document.write("<tr>");
+            document.write("<th>שם פרטי</th>");
+            document.write("<th>שם משפחה</th>");
+            document.write("<th>גיל</th>");
+            document.write("<th>כתובת</th>");
+            document.write("</tr>");
+
+
+            document.write("<tr>");
+            document.write("<td style='background-color:blue;'>" + firstName + "</td>");
+            document.write("<td style='background-color:yellow;'>" + lastName + "</td>");
+            document.write("<td style='background-color:green;'>" + age + "</td>");
+            document.write("<td style='background-color:red;'>" + address + "</td>");
+            document.write("</tr>");
+
+            document.write("</table>");
+    </script>
+
 </body>
 </html>
