@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .button1 {
+            background-color: #f44336; /* Red */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var maxX = window.innerWidth;
+        var maxY = window.innerHeight;
+
+        function Escape() {
+            var bike = document.getElementById("bike");
+            var x = Math.floor(Math.random() * (maxX + 1));
+            var y = Math.floor(Math.random() * (maxY + 1));
+            bike.style.left = x + "px";
+            bike.style.top = y + "px";
+        }
+
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello from button1: myFunction!";
+        }
+        
+    </script>
+</head>
+<body>
+    <h1 style="text-align:center">catch the bike</h1>
+    <div id="bike" style="left:500px; position:absolute;">
+        <img src="../Images/images.jpg" alt="where is the bike"
+             style="width:150px;" onmouseover="Escape()" />
+
+    </div>
+</body>
+</html>

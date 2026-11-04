@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 6</title>
+</head>
+
+<body dir="rtl">
+
+    <script type="text/javascript">
+            var firstName = prompt("הכנס שם פרטי:");
+            var lastName = prompt("הכנס שם משפחה:");
+            var age = prompt("הכנס גיל:");
+            var address = prompt("הכנס כתובת:");
+            if (firstName == null || firstName == " ") {
+                firstName = "לא הוזן שם פרטי";
+            }
+            if (lastName == null || lastName == " ") {
+                lastName = "לא הוזן שם משפחה";
+            }
+            if (isNaN(age) || age == " ") {
+                age = "לא הוזן גיל";
+            }
+            if (address == null || address == "") {
+                address = "לא הוזנה כתובת";
+            }
+            function createTable(firstName, lastName, age, address) {
+                document.write("<table border='1' style='margin:auto; margin-top:150px; border-collapse:collapse; width:740px;'>" +
+                        "<tr>" +
+                            "<th>שם פרטי</th>" +
+                            "<th>שם משפחה</th>" +
+                            "<th>גיל</th>" +
+                            "<th>כתובת</th>" +
+                        "</tr>" +
+                        "<tr>" +
+                            "<td style='background-color:blue;' align='center'>" + firstName + "</td>" +
+                            "<td style='background-color:yellow;' align='center'>" + lastName + "</td>" +
+                            "<td style='background-color:green;' align='center'>" + age + "</td>" +
+                            "<td style='background-color:red;' align='center'>" + address + "</td>" +
+                        "</tr>" +
+                    "</table>");
+            }
+
+            createTable(firstName, lastName, age, address);
+    </script>
+
+</body>
+</html>
