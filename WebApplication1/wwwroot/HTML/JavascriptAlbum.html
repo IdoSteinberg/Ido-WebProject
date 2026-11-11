@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript Album</title>
+    <script type="text/javascript">
+        const images = [
+            "../Images/images.jpg",
+            "../Images/images2.jpg",
+            "../Images/images3.jpg"
+        ];
+        let currentImage = 0;
+
+        function showImage() {
+            document.getElementById("album").src = images[currentImage];
+        }
+
+        function showPrevImage() {
+            currentImage = (currentImage - 1 + images.length) % images.length;
+            showImage();
+        }
+
+        function showNextImage() {
+            currentImage = (currentImage + 1) % images.length;
+            showImage();
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <h1>JavaScript Album</h1>
+        <br />
+        <button type="button" onclick="showPrevImage()">Prev</button>
+        <button type="button" onclick="showNextImage()">Next</button>
+        <br />
+        <br />
+        <img id="album" src="../Images/images.jpg" alt="Album image" />
+    </div>
+</body>
+</html>

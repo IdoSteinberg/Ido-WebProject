@@ -42,15 +42,25 @@
         function myFunction() {
             document.getElementById("demo").innerHTML = "Hello from button1: myFunction!";
         }
-        
+        function toFirstImage() {
+            document.getElementById("demo").src = "../Images/images.jpg";
+        }
+        function toSecondImage() {
+            document.getElementById("demo").src = "../Images/smt.jpg";
+        }
     </script>
 </head>
 <body>
     <h1 style="text-align:center">catch the bike</h1>
+    <div align="center">
+        <img id="demo" src="../Images/images.jpg" alt="First image" height="300" onmouseover="toSecondImage()" onmouseout="toFirstImage()" />
+    </div>
+    <!--
     <div id="bike" style="left:500px; position:absolute;">
         <img src="../Images/images.jpg" alt="where is the bike"
              style="width:150px;" onmouseover="Escape()" />
 
     </div>
+    -->
 </body>
 </html>
