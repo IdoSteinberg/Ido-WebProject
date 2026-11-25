@@ -20,8 +20,6 @@
         return false;
     }
 
-    alert("Validation OK");
-
     if (event && event.target && typeof event.target.submit === "function") {
         event.target.submit();
     }
@@ -35,16 +33,29 @@ function resetValidationState() {
         field.style.borderColor = "";
     });
 
-    var ageError = document.getElementById("age_error");
-    if (ageError) {
-        ageError.innerText = "";
-    }
+    ["id_error", "pass_error", "confirmPass_error", "fName_error", "lName_error", "email_error", "uMobile_error", "address_error", "age_error"].forEach(function (errorId) {
+        var error = document.getElementById(errorId);
+        if (error) {
+            error.innerText = "";
+        }
+    });
 }
 
 function requiredFieldOK(fieldId, fieldName) {
     var field = document.getElementById(fieldId);
+    var errorId = fieldId + "_error";
+
+    if (fieldId === "firstName") {
+        errorId = "fName_error";
+    } else if (fieldId === "lastName") {
+        errorId = "lName_error";
+    }
+
+    var error = document.getElementById(errorId);
     if (!field || field.value.trim().length === 0) {
-        alert(fieldName + " is required.");
+        if (error) {
+            error.innerHTML = fieldName + " is required.";
+        }
         if (field) {
             field.style.borderColor = "red";
         }
@@ -62,7 +73,7 @@ function validateConfirmPassword() {
     }
 
     if (!password || confirmPassword.value !== password.value) {
-        alert("Password confirmation must match the password.");
+        document.getElementById("confirmPass_error").innerHTML = "Password confirmation must match the password.";
         confirmPassword.style.borderColor = "red";
         return false;
     }
@@ -83,7 +94,7 @@ function validatePassword() {
     }
 
     if (!passwordPattern.test(password.value)) {
-        alert("Password must be at least 8 characters long, contain one uppercase letter, and contain one special character.");
+        document.getElementById("pass_error").innerHTML = "Password must be at least 8 characters long, contain one uppercase letter, and contain one special character.";
         password.style.borderColor = "red";
         return false;
     }
@@ -108,7 +119,7 @@ function validateName(fieldId, fieldName) {
     }
 
     if (!namePattern.test(field.value.trim())) {
-        alert(fieldName + " may contain letters, spaces, apostrophes, and hyphens only.");
+        document.getElementById(fieldId === "firstName" ? "fName_error" : "lName_error").innerHTML = fieldName + " may contain letters, spaces, apostrophes, and hyphens only.";
         field.style.borderColor = "red";
         return false;
     }
@@ -125,7 +136,7 @@ function validateEmail() {
     }
 
     if (!emailPattern.test(email.value.trim())) {
-        alert("Please enter a valid email address.");
+        document.getElementById("email_error").innerHTML = "Please enter a valid email address.";
         email.style.borderColor = "red";
         return false;
     }
@@ -143,7 +154,7 @@ function validatePhone() {
 
     var phoneDigits = phone.value.replace(/\D/g, "");
     if (!phonePattern.test(phone.value.trim()) || phoneDigits.length < 7 || phoneDigits.length > 15) {
-        alert("Please enter a valid phone number.");
+        document.getElementById("uMobile_error").innerHTML = "Please enter a valid phone number.";
         phone.style.borderColor = "red";
         return false;
     }
